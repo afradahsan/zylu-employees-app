@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:zylu_employees_app/data/firebase_functions.dart';
@@ -16,7 +17,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool loading = true;
-
   fetchData() async {
     var employeeList = await FirebaseFunctions().getEmployeeData();
     return employeeList;
@@ -24,7 +24,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    print('object');
     return Scaffold(
       backgroundColor: const Color.fromRGBO(245, 245, 238, 1),
       body: SafeArea(

@@ -9,6 +9,7 @@ class NameListContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.sizeOf(context).height;
     DateTime start = DateTime.parse(employee.startdate);
     DateTime? end;
     employee.enddate == 'present'
@@ -16,22 +17,18 @@ class NameListContainer extends StatelessWidget {
         : end = DateTime.parse(employee.enddate);
     final differenceYears = (end.difference(start).inDays / 365).floor();
     return Container(
-      height: 80,
+      height: screenHeight/10,
       width: double.maxFinite,
       decoration: BoxDecoration(
           color: const Color.fromRGBO(211, 242, 106, 1),
-          // gradient: const LinearGradient(colors: [
-          //   Color.fromRGBO(32, 143, 247, 1),
-          //   Color.fromRGBO(10, 118, 243, 1),
-          // ]),
           borderRadius: BorderRadius.circular(10)),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
           children: [
-            const CircleAvatar(
+            CircleAvatar(
                 radius: 30,
-                backgroundImage: AssetImage('assets/images/zylu_logo.jpg')),
+                backgroundImage: NetworkImage(employee.profilepic)),
             sizedwten(context),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,

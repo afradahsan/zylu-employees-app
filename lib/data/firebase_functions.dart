@@ -15,6 +15,7 @@ class FirebaseFunctions{
         startdate: data['startdate'],
         enddate: data['enddate'],
         active: data['active'],
+        profilepic: data['profilepic']
       );
     }).toList();
 

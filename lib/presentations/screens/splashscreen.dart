@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:zylu_employees_app/data/splash_services.dart';
 import 'package:zylu_employees_app/presentations/screens/homepage.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -11,17 +12,10 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
   void initState() {
     super.initState();
-    splashservices();
-  }
-
-  splashservices(){
-    Timer(const Duration(seconds: 3), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const HomePage(),));
-    });
+    SplashServices().splashservices(context);
   }
 
   @override
@@ -30,11 +24,12 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Color.fromRGBO(211, 242, 106, 1),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          CircleAvatar(
-            radius: 50,
-            backgroundImage: AssetImage('assets/images/zylu_logo.jpg'))
+          Center(
+            child: CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage('assets/images/zylu_logo.jpg')),
+          )
         ],
       ),
     );

@@ -4,6 +4,7 @@ class Employee {
   String startdate;
   String enddate;
   bool active;
+  String profilepic;
 
   Employee({
     required this.name,
@@ -11,5 +12,6 @@ class Employee {
     required this.startdate,
     required this.enddate,
     required this.active,
+    required this.profilepic
   });
 }
