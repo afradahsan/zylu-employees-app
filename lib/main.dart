@@ -1,7 +1,10 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:zylu_employees_app/firebase_options.dart';
 import 'package:zylu_employees_app/presentations/screens/homepage.dart';
 
-void main() {
+void main() async{
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 

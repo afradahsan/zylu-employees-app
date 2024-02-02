@@ -8,7 +8,10 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(child: Column(
         children: [
-          Text('Employee List')
+          Text('Employee List'),
+          StreamBuilder(
+            stream: ,
+          builder: )
         ],
       )),
     );
