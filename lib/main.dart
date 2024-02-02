@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zylu_employees_app/firebase_options.dart';
 import 'package:zylu_employees_app/presentations/screens/homepage.dart';
+import 'package:zylu_employees_app/presentations/screens/splashscreen.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
           bodySmall: TextStyle(fontFamily: GoogleFonts.montserrat().fontFamily)
         )
       ),
-      home: const HomePage(),
+      home: const SplashScreen(),
     );
   }
 }
