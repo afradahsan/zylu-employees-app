@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:zylu_employees_app/data/splash_services.dart';
 import 'package:zylu_employees_app/presentations/screens/homepage.dart';
+import 'package:zylu_employees_app/utils/colors.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -20,9 +21,9 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color.fromRGBO(211, 242, 106, 1),
-      body: Column(
+    return Scaffold(
+      backgroundColor: lightgreen,
+      body: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(

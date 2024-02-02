@@ -18,7 +18,8 @@ class LoadingWidget extends StatelessWidget {
               offset += 5;
               time = 800 + offset;
               return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
                   child: Shimmer.fromColors(
                     highlightColor: Colors.white,
                     baseColor: Colors.grey[500]!,

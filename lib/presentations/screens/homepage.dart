@@ -6,6 +6,7 @@ import 'package:zylu_employees_app/data/firebase_functions.dart';
 import 'package:zylu_employees_app/domain/models.dart';
 import 'package:zylu_employees_app/presentations/widgets/loadingwidget.dart';
 import 'package:zylu_employees_app/presentations/widgets/namelistcontainer.dart';
+import 'package:zylu_employees_app/utils/colors.dart';
 import 'package:zylu_employees_app/utils/constants.dart';
 
 class HomePage extends StatefulWidget {
@@ -25,7 +26,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(245, 245, 238, 1),
+      backgroundColor: bgColor,
       body: SafeArea(
           child: Padding(
         padding: const EdgeInsets.all(8.0),

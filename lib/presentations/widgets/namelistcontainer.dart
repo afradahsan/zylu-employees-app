@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zylu_employees_app/domain/models.dart';
+import 'package:zylu_employees_app/utils/colors.dart';
 import 'package:zylu_employees_app/utils/constants.dart';
 
 class NameListContainer extends StatelessWidget {
@@ -17,18 +18,16 @@ class NameListContainer extends StatelessWidget {
         : end = DateTime.parse(employee.enddate);
     final differenceYears = (end.difference(start).inDays / 365).floor();
     return Container(
-      height: screenHeight/10,
+      height: screenHeight / 10,
       width: double.maxFinite,
       decoration: BoxDecoration(
-          color: const Color.fromRGBO(211, 242, 106, 1),
-          borderRadius: BorderRadius.circular(10)),
+          color: lightgreen, borderRadius: BorderRadius.circular(10)),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
           children: [
             CircleAvatar(
-                radius: 30,
-                backgroundImage: NetworkImage(employee.profilepic)),
+                radius: 30, backgroundImage: NetworkImage(employee.profilepic)),
             sizedwten(context),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
